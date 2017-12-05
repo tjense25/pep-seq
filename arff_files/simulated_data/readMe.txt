@@ -15,6 +15,7 @@ NaiveBayes TP Rate: 0.999
 	   968     0        0      | antitoxic
 	     2   995        2      | neutral
 	     0     0      970      | toxic
+
 J48 Tree TP Rate: 0.998
 	 FP Rate: 0.001
 	 Confusion Matrix:
@@ -22,6 +23,7 @@ J48 Tree TP Rate: 0.998
 	   968     0        0      | antitoxic
 	     4   994        1      | neutral
 	     0     0      970      | toxic
+
 SMO   	 TP Rate: 0.999
 	 FP Rate: 0.000
 	 Confusion Matrix:
@@ -33,8 +35,72 @@ SMO   	 TP Rate: 0.999
 
 simulated_arff_2:
 contains same motifs as simulated_arff_1, but introduces more noise
-into the neutral data. Half of the neutral peptides contains a half
-match to one of the toxic or antitoxic motifs
+into the neutral data. Half of the neutral peptides contain partial
+matches to one of the toxic or antitoxic motifs
+
+In this simulated data set the partial matches share 3 of the 4 positions 
+of the toxic or antitoxic motif
 
 Model performance:
+NaiveBayes:	TP Rate: 0.999
+		FP Rate: 0.000
+		Confusion Matrix:
+		toxic neutral antitoxic <--calssified as
+	        974     0        0      | antitoxic
+	        1     1909       3      | neutral
+	        0       0       971     | toxic
+
+J48 Tree:	TP Rate: 0.997
+		FP Rate: 0.001
+		Confusion Matrix:
+		toxic neutral antitoxic <--calssified as
+	        974     0        0      | antitoxic
+	        6     1902       5      | neutral
+	        0       0      971      | toxic
+
+SMO: 		TP Rate: 1.000
+		FP Rate: 0.000
+		Confusion Matrix:
+		toxic neutral antitoxic <--calssified as
+	        974     0        0      | antitoxic
+	        0     1912       1      | neutral
+	        0       0      971      | toxic
+
+
+simulated_arff_3:
+Increases the number of toxic motifs in the data set
+And increases noise. Note One of the toxic motifs is a partial
+match to an antitoxic motif!!
+
+Toxic motifs: 	C**VY**F
+		**IL*D*S
+		HV***NF*
+Antitoxic motif: HVV***G*
+		 **RRVR**
+
+Model performance:
+NaiveBayes:	TP Rate: 0.915
+		FP Rate: 0.039
+		Confusion Matrix:
+		toxic neutral antitoxic <--calssified as
+	        1961     1        12     | antitoxic
+	        216     2393      291    | neutral
+	        0        80      2136    | toxic
+
+J48 Tree:	TP Rate: 0.974
+		FP Rate: 0.015
+		Confusion Matrix:
+		toxic neutral antitoxic <--calssified as
+	        1974     0      0      | antitoxic
+	         2     2824     74     | neutral
+	         0      105    2111    | toxic
+
+SMO: 		TP Rate: 1.000
+		FP Rate: 0.000
+		Confusion Matrix:
+		toxic neutral antitoxic <--calssified as
+	        1974     0        0      | antitoxic
+	         27    2982      81      | neutral
+	         0       0      2216     | toxic
+
 
