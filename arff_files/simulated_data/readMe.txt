@@ -104,3 +104,25 @@ SMO: 		TP Rate: 1.000
 	         0       0      2216     | toxic
 
 
+simulated_arff_4:
+Created 100 toxic motifs, 100 antitoxic motifs, and 100 neutral motifs
+For each motif created 100 peptides that matched that motif
+Machine learning results showed terrible results. Could not classify at all
+
+
+
+
+Simulated_arff_5:
+Scaled back the number of motifs in simulated_arff_4, instead only creating 10
+of each motif. 
+Machine Learning models did much better classifying!!
+SMO: 0.964 TP Rate
+Naive Bayes: 0.937
+J48 Tree: 0.909
+Random Forest: 0.994
+
+J48 Tree was able to accurately classify most of them by looking only at 3
+positions, even when there were four different essential positions in the
+motif
+
+

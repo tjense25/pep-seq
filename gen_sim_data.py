@@ -3,6 +3,8 @@ import sys
 import random
 import re
 
+#Function creates a set of motifs by randomly selecting
+#4 out of 8 positions to put a random residue in
 def createMotifs(num_to_create, residues):
 	motifs = set()
 	while len(motifs) < num_to_create:
@@ -16,6 +18,7 @@ def createMotifs(num_to_create, residues):
 		motifs.add(''.join(motif))
 	return motifs
 
+#Generates a randomly created peptide that matches a given motif
 def getPepsMatchingMotif(num_to_create, motif, residues):
 	peps = set()
 	while len(peps) < num_to_create:
@@ -30,9 +33,9 @@ def getPepsMatchingMotif(num_to_create, motif, residues):
 			
 
 def main():
-	OutFile = open('arff_files/simulated_data/simulated_data_4.arff', 'w')
+	OutFile = open('arff_files/simulated_data/simulated_data_5.arff', 'w')
 	OutFile.write('@relation pep-seq\n')
-	residues = ['R','H','D','S','N','C','G','V','I','L','F','Y']
+	residues = ['R','H','D','S','N','C','G','V','I','L','F','Y'] #Some residues not inluded because they're not present in original dataset
 	for i in range(8):
 		OutFile.write('@attribute pos%d {' % i)
 		for r in residues:
@@ -49,11 +52,11 @@ def main():
 	neutral = set()
 	antitoxic = set()
 
-	motifs = createMotifs(300, residues)
+	motifs = createMotifs(30, residues)
 	for i,motif in enumerate(motifs):
-		if i < 100:
+		if i < 10:
 			toxic = toxic | getPepsMatchingMotif(100, motif, residues)
-		elif i < 200:
+		elif i < 20:
 			neutral = neutral | getPepsMatchingMotif(100, motif, residues)
 		else:
 			antitoxic = antitoxic | getPepsMatchingMotif(100, motif, residues)
