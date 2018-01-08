@@ -6,7 +6,7 @@ import random
 residues = 'RHKDESTNQCGPAVILFMYW'
 if len(sys.argv) == 2 and sys.argv[1].endswith('.csv'):
 	InFile = open(sys.argv[1], 'rU')
-	outFileName = sys.argv[1].strip('.csv') + '.balanced.csv'
+	outFileName = sys.argv[1].strip('.csv') + '.no_neutral.csv'
 	OutFile = open(outFileName, 'w')
 	linenumber = 0
 	neutral_lines = []
@@ -21,8 +21,8 @@ if len(sys.argv) == 2 and sys.argv[1].endswith('.csv'):
 				neutral_lines.append(line)
 			else:
 				OutFile.write(line)
-	for i in random.sample(range(0, len(neutral_lines)), 5458):
-		OutFile.write(neutral_lines[i])
+	#for i in random.sample(range(0, len(neutral_lines)), 5458):
+		#OutFile.write(neutral_lines[i])
 	InFile.close();
 	OutFile.close();
 else:

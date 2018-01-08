@@ -107,9 +107,15 @@ SMO: 		TP Rate: 1.000
 simulated_arff_4:
 Created 100 toxic motifs, 100 antitoxic motifs, and 100 neutral motifs
 For each motif created 100 peptides that matched that motif
-Machine learning results showed terrible results. Could not classify at all
+Machine learning results showed significantly worse results
+Naive Bayes: 0.517 TP Rate
+J48 Tree: 0.746 
+Random Forrest: 0.965
 
 
+Appears that when the number of motifs increase the motif space becomes more
+convoluted, Random Forrest still can calssify peptides correctly. Random
+Forrest vastly outperforms other models.
 
 
 Simulated_arff_5:
