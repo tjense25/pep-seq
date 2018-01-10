@@ -1,0 +1,141 @@
+=======================================================================================
+Data Preparation:
+=======================================================================================
+
+Data filtered by comparing the values for the bacteria count in the induced population 
+between the two samples. Samples thatdiffered greatly were rejected. Also, samples with 
+too samll of a sample size were rejected. Finally, it was noticed that 8 of the amino acids 
+were greatly underrepresented in the dataset. For sake of having large enough sample sizes, 
+all peptides that contained one of these amino acids were also rejected. 
+
+We scored each sample by taking the ratio of bacteria that survived the induced population 
+to the count of bacteria in the referenbce population. So low values (close to zero) for 
+this retio represented the peptide killing more bacteria and therefore,being more toxic, 
+while high values ( > 1) meant that the vector helped bacteria survive and was therefore 
+antitoxic. We categorized the data into distinct categories based on standard deviation 
+from the mean, toxic peptides found in left-tail, neutral in the middle, and anti-toxic in 
+the right tail. Then we converted the dataset to a new data set that continaed just information 
+on the peptide sequence, and the categorized toxicity and converted this new data set into 
+arf format to be ran through weka.
+
+The arff format had an attribute for each position of the peptide, being a nominal value for 
+one of the 12 amino acids present in the dataset. And one final attribute for the categorized 
+toxicity: toxic, neutral, or antitoxic. We then ran multiple different models through weka
+on this dataset to determine if an algorithm can successsfully categorize the peptide based just 
+on its sequence. We primarily used 5 different models: naive bayes, multilayer perceptron, 
+Support Machine Vector, J48 tree, and Random Forrest. 
+
+=======================================================================================
+Results:
+=======================================================================================
+
+------------
+Naive Bayes: 
+------------
+Parameters: Default in Weka
+
+Time taken to build model: 0.04 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       43897               80.4593 %
+Incorrectly Classified Instances     10661               19.5407 %
+Kappa statistic                          0.1628
+Mean absolute error                      0.1867
+Root mean squared error                  0.3045
+Relative absolute error                 82.3228 %
+Root relative squared error             90.4266 %
+Total Number of Instances            54558     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.179    0.007    0.733      0.179    0.288      0.334    0.866     0.527     anti-toxic
+                 0.973    0.869    0.818      0.973    0.889      0.197    0.764     0.915     neutral
+                 0.081    0.017    0.349      0.081    0.131      0.128    0.848     0.323     toxic
+Weighted Avg.    0.805    0.697    0.762      0.805    0.753      0.204    0.782     0.817     
+
+=== Confusion Matrix ===
+
+     a     b     c   <-- classified as
+   977  4465    14 |     a = anti-toxic
+   353 42478   812 |     b = neutral
+     2  5015   442 |     c = toxic
+
+---------
+j48 Tree:
+---------
+Paramters: default
+
+Time taken to build model: 0.32 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       43643               79.9938 %
+Incorrectly Classified Instances     10915               20.0062 %
+Kappa statistic                          0     
+Mean absolute error                      0.2267
+Root mean squared error                  0.3367
+Relative absolute error                 99.9941 %
+Root relative squared error            100      %
+Total Number of Instances            54558     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.100     anti-toxic
+                 1.000    1.000    0.800      1.000    0.889      0.000    0.500     0.800     neutral
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.100     toxic
+Weighted Avg.    0.800    0.800    0.640      0.800    0.711      0.000    0.500     0.660     
+
+=== Confusion Matrix ===
+
+     a     b     c   <-- classified as
+     0  5456     0 |     a = anti-toxic
+     0 43643     0 |     b = neutral
+     0  5459     0 |     c = toxic
+
+--------------
+Random Forrest:
+--------------
+Parameters: default
+
+Data Set to large to be ran using a random forrest. Weka Error: Not enough memory in Heap.
+
+----------------------
+Support Machine vector:
+----------------------
+
+
+----------------------
+MultiLayer Perceptron:
+----------------------
+
+
+=======================================================================================
+Conclusion:
+=======================================================================================
+
+Results are pretty consistent at showing a 0.80 true positive rate and a False
+Positive rate of about the same size. There appears to be a large
+overrepresentation of neutral data in this dataset (there are about 40,000
+peptides that are netural while only about 5,000 that are either toxic or
+antitoxic). This order-of-magnitude difference has caused the machine models
+to classify just classify everything as neutral without even looking at the
+sequences. This can be clearly seen from looking at the optimal j48 tree,
+which only contained one node that instantly classified all of them as
+neutral.
+
+Moving forward, we need to solve this problem by better balancing the data.
+Once possible solution is to look at a much smaller subset of the neutral data
+instead of all 40,000 of them, however this runs the risk of throwing out
+potentially eseential data points. 
+
+Another problem ran into is that the data set size was too large for a lot of
+these machine learning modesl to handle. Looking specifically at the Random
+Forrest, weka did not have a big enough heap to store all that data. Also, the
+nueral network and SMO took a Long time to run. So potentially we can try
+improving our filtering techniques to filter the data better.
+
