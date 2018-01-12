@@ -13,7 +13,7 @@ class AAproperties:
 			if inTable:
 				columns = line.strip('\n').split('\t')
 				residue = columns[1]
-				properties = columns[2:]
+				properties = columns[8:]
 				properties = map(float, properties)
 				self.AAdict[residue] = properties
 		InFile.close()

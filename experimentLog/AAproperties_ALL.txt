@@ -1,0 +1,100 @@
+=============================================================================================
+Data Preparation:
+=============================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+=============================================================================================
+Results:
+=============================================================================================
+
+------------
+Naive Bayes:
+------------
+
+Using Weka defualt parameters:
+
+java weka.classifiers.bayes.NaiveBayes -t
+	lblarge.filtered.balanced.AAprops.arff
+
+Time taken to build model: 0.3 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        9920               60.5913 %
+Incorrectly Classified Instances      6452               39.4087 %
+Kappa statistic                          0.4089
+Mean absolute error                      0.2752
+Root mean squared error                  0.4514
+Relative absolute error                 61.9187 %
+Root relative squared error             95.7535 %
+Total Number of Instances            16372     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.742    0.253    0.595      0.742    0.661      0.468    0.829     0.682     toxic
+                 0.350    0.171    0.505      0.350    0.414      0.200    0.659     0.482     neutral
+                 0.725    0.167    0.684      0.725    0.704      0.550    0.855     0.744     anti-toxic
+Weighted Avg.    0.606    0.197    0.595      0.606    0.593      0.406    0.781     0.636     
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 4053 1069  337 |    a = toxic
+ 2059 1910 1489 |    b = neutral
+  698  800 3957 |    c = anti-toxic
+
+
+
+----------
+j48 tree:
+----------
+Using defualt weka model:
+
+java weka.classifiers.trees.j48 -C 0.25 -M 2 -t
+	lblarge.filtered.balanced.AAprops.arff
+
+Time taken to build model: 8.5 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        9728               59.4185 %
+Incorrectly Classified Instances      6644               40.5815 %
+Kappa statistic                          0.3913
+Mean absolute error                      0.2978
+Root mean squared error                  0.4803
+Relative absolute error                 67.0051 %
+Root relative squared error            101.8908 %
+Total Number of Instances            16372     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.709    0.207    0.632      0.709    0.668      0.489    0.764     0.549     toxic
+                 0.407    0.236    0.463      0.407    0.433      0.177    0.573     0.411     neutral
+                 0.666    0.166    0.667      0.666    0.667      0.501    0.756     0.575     anti-toxic
+Weighted Avg.    0.594    0.203    0.587      0.594    0.589      0.389    0.698     0.512     
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 3871 1229  359 |    a = toxic
+ 1783 2222 1453 |    b = neutral
+  475 1345 3635 |    c = anti-toxic
+
+
+=============================================================================================
+Conclusion:
+=============================================================================================
