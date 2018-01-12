@@ -12,8 +12,9 @@ class AAproperties:
 				inTable = True
 			if inTable:
 				columns = line.strip('\n').split('\t')
-				residue = columns[0]
+				residue = columns[1]
 				properties = columns[2:]
+				properties = map(float, properties)
 				self.AAdict[residue] = properties
 		InFile.close()
 		print(self.AAdict)

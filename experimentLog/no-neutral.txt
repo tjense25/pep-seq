@@ -1,0 +1,209 @@
+===================================================================
+Data Preparation:
+===================================================================
+
+In an attempt to get better classification of the toxicity classes, we decided
+to exclude neutral peptides in our analysis, since these peptides were what
+the machine models were having the most trouble classifying. For this dataset
+we excluded all of the neutral peptides. If the model can successfully
+differentiate between toxic and antitoxic peptides, it would give evidence to
+the idea that there are certain motifs causing toxicity or antitoxicity. 
+
+We used the filtered and balanced dataset, but then removed all peptides that
+were in the neutral class, then converted the file into arff format. We ran
+the same machine learning models on weka and recorded the results.
+
+===================================================================
+Results:
+===================================================================
+
+-------------
+Naive Bayes:
+-------------
+
+Using weka's default parameters
+ weka.classifiers.bayes.NaiveBayes
+
+Time taken to build model: 0.02 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        9921               90.9016 %
+Incorrectly Classified Instances       993                9.0984 %
+Kappa statistic                          0.818 
+Mean absolute error                      0.0893
+Root mean squared error                  0.2146
+Relative absolute error                 26.7968 %
+Root relative squared error             52.5652 %
+Total Number of Instances            10914     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.926    0.108    0.895      0.926    0.911      0.819    0.962     0.947     toxic
+                 0.000    0.000    0.000      0.000    0.000      0.000    ?         ?         neutral
+                 0.892    0.074    0.924      0.892    0.907      0.819    0.962     0.970     anti-toxic
+Weighted Avg.    0.909    0.091    0.910      0.909    0.909      0.819    0.962     0.958     
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 5057    0  402 |    a = toxic
+    0    0    0 |    b = neutral
+  591    0 4864 |    c = anti-toxic
+
+-------------
+j48 Tree:
+-------------
+
+Using weka's defualt parameters
+weka.classifiers.trees.J48 -C 0.25 -M 2
+
+Time taken to build model: 0.08 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        8739               80.0715 %
+Incorrectly Classified Instances      2175               19.9285 %
+Kappa statistic                          0.6014
+Mean absolute error                      0.1954
+Root mean squared error                  0.3238
+Relative absolute error                 58.6047 %
+Root relative squared error             79.3233 %
+Total Number of Instances            10914     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.803    0.201    0.800      0.803    0.801      0.601    0.833     0.795     toxic
+                 0.000    0.000    0.000      0.000    0.000      0.000    ?         ?         neutral
+                 0.799    0.197    0.802      0.799    0.800      0.601    0.833     0.803     anti-toxic
+Weighted Avg.    0.801    0.199    0.801      0.801    0.801      0.601    0.833     0.799     
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 4382    0 1077 |    a = toxic
+    0    0    0 |    b = neutral
+ 1098    0 4357 |    c = anti-toxic
+
+
+
+---------------
+Random Forrest:
+---------------
+
+Using weka's default parameters
+
+
+---------------
+SMO:
+---------------
+
+Using Weka's defualt parameters
+SMO -C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007" -calibrator "weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+
+Time taken to build model: 353.92 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        9968               91.3322 %
+Incorrectly Classified Instances       946                8.6678 %
+Kappa statistic                          0.8266
+Mean absolute error                      0.2415
+Root mean squared error                  0.3055
+Relative absolute error                 72.4378 %
+Root relative squared error             74.8341 %
+Total Number of Instances            10914     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.931    0.104    0.900      0.931    0.915      0.827    0.913     0.872     toxic
+                 0.000    0.000    0.000      0.000    0.000      0.000    ?         ?         neutral
+                 0.896    0.069    0.928      0.896    0.912      0.827    0.913     0.884     anti-toxic
+Weighted Avg.    0.913    0.087    0.914      0.913    0.913      0.827    0.913     0.878     
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 5080    0  379 |    a = toxic
+    0    0    0 |    b = neutral
+  567    0 4888 |    c = anti-toxic
+
+----------------------
+Multilayer Perceptron:
+----------------------
+
+Using Weka's default paramters: 
+MultiLayerPerceptron -L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H a
+
+Time taken to build model: 927.8 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        9912               90.8191 %
+Incorrectly Classified Instances      1002                9.1809 %
+Kappa statistic                          0.8164
+Mean absolute error                      0.0632
+Root mean squared error                  0.2344
+Relative absolute error                 18.9561 %
+Root relative squared error             57.4093 %
+Total Number of Instances            10914     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.926    0.110    0.894      0.926    0.910      0.817    0.957     0.932     toxic
+                 0.000    0.000    0.000      0.000    0.000      0.000    ?         ?         neutral
+                 0.890    0.074    0.924      0.890    0.906      0.817    0.959     0.966     anti-toxic
+Weighted Avg.    0.908    0.092    0.909      0.908    0.908      0.817    0.958     0.949     
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 5057    0  402 |    a = toxic
+    0    0    0 |    b = neutral
+  600    0 4855 |    c = anti-toxic
+
+
+
+===================================================================
+Conclusion:
+===================================================================
+
+We see through these results that the machines are successfully able to
+differentiate toxic peptides from nontoxic peptides. Excluding neutral
+peptides has significantly imporved performance of the models. From about 0.7
+TP rate to 0.91. These are promising results. There is enough information in
+the sequence of amino acids for a computer to distinguish whether a toxic and
+antitoxic protein. This probably means that are specific motifs that are
+conferring to the peptide this toxicity or antitoxictiy.
+
+This also brings up interesting questions as to why these classifiers are so
+good, yet including the neutral peptides messes everything up. What about
+the inclusion of neutral peptides causes the machine to no longer recognize
+the motifs as well? One possible explanation is that a lot of the motifs
+conferring toxicity are also present in the neutral peptides, which causes
+ambiguity in the machine classification system as to wehether to classify it
+as neutral or toxic. Also, it calls into question if a lot of the neutral
+peptides have the same motifs as specific toxic peptides, is this motif really
+toxic, and what is causing the difference in survival rates of the induced
+population?
+
+Looking at the j48 we can trace through the nodes and find the best candidates
+for the toxic motifs. Writing a program to traverse the tree and record the
+amino acid character at each node and find which motifs are most
+toxic/antitoxic will facilitate this process. Just looking at the results
+though we see the following motifs are most likely to be toxic:
+
+
+
+
+We can do similar reasoning by looking at the weights of the neural network
+seeing which positions and residue at those positions are most influential in
+deciding the toxicity. 

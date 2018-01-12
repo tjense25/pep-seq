@@ -1,0 +1,191 @@
+===================================================================
+Data Preparation:
+===================================================================
+
+Data for these experiments are basically the same as those for the
+filtered data experiments, with the exception that this data set is balanced
+so that all the toxicity classes have the same amount of peptides in it.
+To Do this balancing, we randomly selected 5,000 out of the 40,000 neutral
+peptides to include in the analysis and disregarded the rest of them.
+
+The perils of testing on a balanced data set is that we had to throw away
+most of our data. We justify doing this because the data that we threw away
+was for neutral peptides, which aren't an integral part of our analysis. We
+are ultimately searching for toxic motifs in peptides, so ignroing a lot of 
+the neutral peptides is fine.
+
+An alternative possibility to removing so many of the neutral peptides would 
+have been to duplicate the antitoxic and toxic peptides so that there were more
+of them. We decided not to do this however, because we did not want the machine
+to memorize the specific motifs in this dataset. Rather we want it to find general
+toxic motifs. 
+
+After balancing, we converted the data file into arf format and ran the same 
+machine learning tests as we did on the filtered data set.
+
+
+===================================================================
+Results:
+===================================================================
+
+------------
+Naive Bayes:
+------------
+
+Using default weka parameters
+
+Time taken to build model: 0.02 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       11660               71.2192 %
+Incorrectly Classified Instances      4712               28.7808 %
+Kappa statistic                          0.5683
+Mean absolute error                      0.2806
+Root mean squared error                  0.3703
+Relative absolute error                 63.134  %
+Root relative squared error             78.56   %
+Total Number of Instances            16372     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.825    0.156    0.726      0.825    0.772      0.650    0.898     0.762     toxic
+                 0.495    0.147    0.628      0.495    0.554      0.373    0.760     0.589     neutral
+                 0.816    0.129    0.759      0.816    0.787      0.675    0.906     0.846     anti-toxic
+Weighted Avg.    0.712    0.144    0.704      0.712    0.704      0.566    0.855     0.733     
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 4503  862   94 |    a = toxic
+ 1437 2703 1318 |    b = neutral
+  263  738 4454 |    c = anti-toxic
+
+-----------
+j48 tree:
+-----------
+
+using Weka default parameters
+
+Time taken to build model: 0.14 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        8910               54.4222 %
+Incorrectly Classified Instances      7462               45.5778 %
+Kappa statistic                          0.3163
+Mean absolute error                      0.3625
+Root mean squared error                  0.4524
+Relative absolute error                 81.5525 %
+Root relative squared error             95.9764 %
+Total Number of Instances            16372     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.731    0.291    0.557      0.731    0.632      0.419    0.754     0.544     toxic
+                 0.255    0.167    0.433      0.255    0.321      0.104    0.563     0.386     neutral
+                 0.647    0.226    0.588      0.647    0.616      0.412    0.755     0.565     anti-toxic
+Weighted Avg.    0.544    0.228    0.526      0.544    0.523      0.311    0.691     0.498     
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 3991  816  652 |    a = toxic
+ 2250 1390 1818 |    b = neutral
+  922 1004 3529 |    c = anti-toxic
+
+---------------
+random Forrest:
+---------------
+
+Using default weka parameters.
+
+RUNTIME ERROR. Not enough memory in the heap. Dataset too large.
+
+----------------------
+Support Machine Vector:
+-----------------------
+
+Using weka's default parameters
+
+Time taken to build model: 1618.9 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       11756               71.8055 %
+Incorrectly Classified Instances      4616               28.1945 %
+Kappa statistic                          0.5771
+Mean absolute error                      0.2977
+Root mean squared error                  0.3866
+Relative absolute error                 66.9894 %
+Root relative squared error             82.0079 %
+Total Number of Instances            16372     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.846    0.165    0.719      0.846    0.777      0.657    0.868     0.686     toxic
+                 0.505    0.145    0.636      0.505    0.563      0.385    0.679     0.486     neutral
+                 0.804    0.113    0.780      0.804    0.792      0.686    0.870     0.719     anti-toxic
+Weighted Avg.    0.718    0.141    0.712      0.718    0.711      0.576    0.806     0.630     
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 4616  784   59 |    a = toxic
+ 1528 2755 1175 |    b = neutral
+  275  795 4385 |    c = anti-toxic
+
+
+
+----------------------
+Multilayer Perceptron:
+----------------------
+
+
+===================================================================
+Conclusions:
+===================================================================
+
+For this data set true positive rates are not very good. Overall, these
+algorithms cannot accurately categorize the peptides. Looking at the
+confusion matrices, they do get the majority of antitoxic and toxic peptides
+categorized correctly, but they are terrible at accurately categorizing
+neutral peptides. This could potentially be because we are looking at such
+a small subset of the actual netural proteins becuase we have thrown away so
+much of that data, the machine might not have enough data to find the patterns
+in this class.
+
+The false positive rates overall are significantly better than in the solely
+filtered dataset, which isn't surprising becuase now that the datasets are
+balanced it is actually choosing all three categories. 
+
+Looking at the J48 tree, we see that for most peptides, it is making the
+decision based on just three positions, with position 3 being first and most 
+influential spot to determine the overall motifs. If the test was more
+accurate, we can find motifs by searching through this j48 tree, but with a TP
+rate so low, any motifs found in this tree might not be that accurate.
+
+We might be able to get better results with a better balancing procedure.
+Perhaps not removing so many of the neutral peptides and duplicating some of
+the toxic and antitoxic ones will give us the same balanced dataset without
+having to throw out so much of our data. Another possibility would be to go
+towards the other extreme: disregard neutral proteins all together. Since, the
+machines are struggling the most to classify those, and since they are not the
+partiuclar class we are interested in (since we are looking specifically at
+finding toxic motifs). Without the neutral class, the machines would probably
+be significantly better at classifying.
+
+Finally, we see that Random forrest is still having trouble running becuase of 
+the size of the dataset and the amount of memory in the heap. Even after
+filtering the data set significanlty and throwing out 7/8 of the neutral
+peptides we are still running into problems with the dataset being too big. A
+solution would be to run Weka from the command line using a command to
+increase the heap size, but even then we will still be running into the
+problem of it running slowly (with SMO taking about an hour to build the
+model)
