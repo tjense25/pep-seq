@@ -26,7 +26,7 @@ if len(sys.argv) == 2 and sys.argv[1].endswith('.csv'):
 	outFileName = 'arff_files' + sys.argv[1].strip('raw_data').strip('.csv') + '.AAprops.arff'
 	OutFile = open(outFileName, 'w')
 	OutFile.write('@relation pep-seq\n')
-	AA_properties = ["acidR", "basicR", "sulfur", "hydroxy", "aromatic", "cyclic", "polarity", "charge", "hydrpthy", "MW"];
+	AA_properties = ["polarity", "charge", "hydrpthy", "MW"];
 	for i in range(1, 9):
 		for p in AA_properties:
 			OutFile.write('@attribute pos%d%s NUMERIC\n' % (i, p))
