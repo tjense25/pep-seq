@@ -1,0 +1,8 @@
+Research to-do list:
+
+1. Research molecular descriptors and QSARS and how to apply to our data
+2. Research more about deep nueral nets/ convolutional networs especially in relation to 1).
+3. Write motif finding algorithm to traverse through j48 tree to find most probably motifs 
+4. Write algorithm to calculate peptide overlap percentage between toxicity groups in simulated data
+5. Run MLP and SMO on No neutral data.
+6. Find Machine learning based clustering software for proteins & run on our dataset
