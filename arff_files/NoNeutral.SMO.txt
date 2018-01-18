@@ -1,0 +1,199 @@
+
+=== Classifier model (full training set) ===
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: toxic, neutral
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+ -       1     
+
+Number of kernel evaluations: -1
+
+Classifier for classes: toxic, anti-toxic
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.4881 * (normalized) pos1=R
+ +       0.132  * (normalized) pos1=H
+ +       0.4802 * (normalized) pos1=D
+ +       0.4457 * (normalized) pos1=S
+ +       0.5952 * (normalized) pos1=N
+ +      -0.5155 * (normalized) pos1=C
+ +       0.4971 * (normalized) pos1=G
+ +      -0.2321 * (normalized) pos1=V
+ +      -0.3653 * (normalized) pos1=I
+ +      -0.2313 * (normalized) pos1=L
+ +      -0.6941 * (normalized) pos1=F
+ +      -0.6    * (normalized) pos1=Y
+ +       0.3669 * (normalized) pos2=R
+ +       0.1777 * (normalized) pos2=H
+ +       0.6355 * (normalized) pos2=D
+ +       0.4459 * (normalized) pos2=S
+ +       0.7679 * (normalized) pos2=N
+ +      -0.4212 * (normalized) pos2=C
+ +       0.8037 * (normalized) pos2=G
+ +      -0.2564 * (normalized) pos2=V
+ +      -0.6266 * (normalized) pos2=I
+ +      -0.4391 * (normalized) pos2=L
+ +      -0.7468 * (normalized) pos2=F
+ +      -0.7074 * (normalized) pos2=Y
+ +       0.5872 * (normalized) pos3=R
+ +       0.1807 * (normalized) pos3=H
+ +       0.9118 * (normalized) pos3=D
+ +       0.6363 * (normalized) pos3=S
+ +       0.7044 * (normalized) pos3=N
+ +      -0.4914 * (normalized) pos3=C
+ +       0.85   * (normalized) pos3=G
+ +      -0.4738 * (normalized) pos3=V
+ +      -0.8291 * (normalized) pos3=I
+ +      -0.6561 * (normalized) pos3=L
+ +      -0.7834 * (normalized) pos3=F
+ +      -0.6365 * (normalized) pos3=Y
+ +       0.5257 * (normalized) pos4=R
+ +       0.2365 * (normalized) pos4=H
+ +       0.5696 * (normalized) pos4=D
+ +       0.7614 * (normalized) pos4=S
+ +       1.0095 * (normalized) pos4=N
+ +      -0.4974 * (normalized) pos4=C
+ +       0.8791 * (normalized) pos4=G
+ +      -0.4142 * (normalized) pos4=V
+ +      -0.8637 * (normalized) pos4=I
+ +      -0.6328 * (normalized) pos4=L
+ +      -0.7335 * (normalized) pos4=F
+ +      -0.8403 * (normalized) pos4=Y
+ +       0.4218 * (normalized) pos5=R
+ +       0.4288 * (normalized) pos5=H
+ +       0.9263 * (normalized) pos5=D
+ +       0.4891 * (normalized) pos5=S
+ +       0.9712 * (normalized) pos5=N
+ +      -0.4919 * (normalized) pos5=C
+ +       0.6376 * (normalized) pos5=G
+ +      -0.3477 * (normalized) pos5=V
+ +      -0.7407 * (normalized) pos5=I
+ +      -0.6704 * (normalized) pos5=L
+ +      -0.9325 * (normalized) pos5=F
+ +      -0.6916 * (normalized) pos5=Y
+ +       0.312  * (normalized) pos6=R
+ +       0.309  * (normalized) pos6=H
+ +       0.7307 * (normalized) pos6=D
+ +       0.5412 * (normalized) pos6=S
+ +       0.648  * (normalized) pos6=N
+ +      -0.4817 * (normalized) pos6=C
+ +       0.6261 * (normalized) pos6=G
+ +      -0.294  * (normalized) pos6=V
+ +      -0.5844 * (normalized) pos6=I
+ +      -0.3342 * (normalized) pos6=L
+ +      -0.8362 * (normalized) pos6=F
+ +      -0.6364 * (normalized) pos6=Y
+ +       0.4936 * (normalized) pos7=R
+ +       0.1793 * (normalized) pos7=H
+ +       0.2138 * (normalized) pos7=D
+ +       0.5332 * (normalized) pos7=S
+ +       0.6112 * (normalized) pos7=N
+ +      -0.2767 * (normalized) pos7=C
+ +       0.6721 * (normalized) pos7=G
+ +       0.0415 * (normalized) pos7=V
+ +      -0.4309 * (normalized) pos7=I
+ +      -0.51   * (normalized) pos7=L
+ +      -0.777  * (normalized) pos7=F
+ +      -0.7499 * (normalized) pos7=Y
+ +       0.0326 * (normalized) pos8=R
+ +       0.6494 * (normalized) pos8=H
+ +       0.3489 * (normalized) pos8=D
+ +       0.7246 * (normalized) pos8=S
+ +       0.6021 * (normalized) pos8=N
+ +      -0.2184 * (normalized) pos8=C
+ +       0.3962 * (normalized) pos8=G
+ +       0.0515 * (normalized) pos8=V
+ +      -0.2652 * (normalized) pos8=I
+ +      -0.2455 * (normalized) pos8=L
+ +      -0.8315 * (normalized) pos8=F
+ +      -1.2446 * (normalized) pos8=Y
+ +       1.2474
+
+Number of kernel evaluations: 200171755 (32.241% cached)
+
+Classifier for classes: neutral, anti-toxic
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+ +       1     
+
+Number of kernel evaluations: -1
+
+
+
+Time taken to build model: 54.59 seconds
+
+Time taken to test model on training data: 0.22 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances       10001               91.6346 %
+Incorrectly Classified Instances       913                8.3654 %
+Kappa statistic                          0.8327
+Mean absolute error                      0.2408
+Root mean squared error                  0.3044
+Relative absolute error                 72.237  %
+Root relative squared error             74.5643 %
+Total Number of Instances            10914     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.933    0.100    0.903      0.933    0.918      0.833    0.916     0.876     toxic
+                 ?        0.000    ?          ?        ?          ?        ?         ?         neutral
+                 0.900    0.067    0.931      0.900    0.915      0.833    0.916     0.887     anti-toxic
+Weighted Avg.    0.916    0.084    0.917      0.916    0.916      0.833    0.916     0.882     
+
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 5094    0  365 |    a = toxic
+    0    0    0 |    b = neutral
+  548    0 4907 |    c = anti-toxic
+
+Time taken to perform cross-validation: 422.99 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances        9968               91.3322 %
+Incorrectly Classified Instances       946                8.6678 %
+Kappa statistic                          0.8266
+Mean absolute error                      0.2415
+Root mean squared error                  0.3055
+Relative absolute error                 72.4378 %
+Root relative squared error             74.8341 %
+Total Number of Instances            10914     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.931    0.104    0.900      0.931    0.915      0.827    0.913     0.872     toxic
+                 ?        0.000    ?          ?        ?          ?        ?         ?         neutral
+                 0.896    0.069    0.928      0.896    0.912      0.827    0.913     0.884     anti-toxic
+Weighted Avg.    0.913    0.087    0.914      0.913    0.913      0.827    0.913     0.878     
+
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 5080    0  379 |    a = toxic
+    0    0    0 |    b = neutral
+  567    0 4888 |    c = anti-toxic
+

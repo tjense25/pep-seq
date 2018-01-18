@@ -34,7 +34,7 @@ def getPepsMatchingMotif(num_to_create, motif, residues):
 
 def main():
 
-	OutFile = open('arff_files/simulated_data/simulated_data_5.arff', 'w')
+	OutFile = open('arff_files/simulated_data/simulated_data_6.arff', 'w')
 
 	toxic = set()
 	neutral = set()
@@ -42,16 +42,16 @@ def main():
 	
 	residues = ['R','H','D','S','N','C','G','V','I','L','F','Y'] #Some residues not inluded because they're not present in original dataset
 
-	motifs = createMotifs(30, residues)
+	motifs = createMotifs(300, residues)
 	for i,motif in enumerate(motifs):
-		if i < 10:
-			toxic = toxic | getPepsMatchingMotif(100, motif, residues)
+		if i < 100:
+			toxic = toxic | getPepsMatchingMotif(10, motif, residues)
 			toxicity = "toxic"
-		elif i < 20:
-			neutral = neutral | getPepsMatchingMotif(100, motif, residues)
+		elif i < 200:
+			neutral = neutral | getPepsMatchingMotif(10, motif, residues)
 			toxicity = "neutral"
 		else:
-			antitoxic = antitoxic | getPepsMatchingMotif(100, motif, residues)
+			antitoxic = antitoxic | getPepsMatchingMotif(10, motif, residues)
 			toxicity = "antitoxic"
 		OutFile.write('%% %s: %s\n' % (motif, toxicity))
 
