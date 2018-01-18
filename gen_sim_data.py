@@ -1,4 +1,4 @@
-#! usr/bin/env python
+#!/usr/bin/python
 import sys
 import random
 import re
@@ -35,6 +35,7 @@ def getPepsMatchingMotif(num_to_create, motif, residues):
 def main():
 
 	OutFile = open('arff_files/simulated_data/simulated_data_6.arff', 'w')
+	TEST  = open('arff_files/simulated_data/TEST6.arff', 'w')
 
 	toxic = set()
 	neutral = set()
@@ -56,19 +57,26 @@ def main():
 		OutFile.write('%% %s: %s\n' % (motif, toxicity))
 
 	OutFile.write('@relation pep-seq\n')
-
+	TEST.write('@relation pep-seq\n')
+	
 	for i in range(8):
 		OutFile.write('@attribute pos%d {' % i)
+		TEST.write('@attribute pos%d {' % i)
 		for r in residues:
 			if r == 'R':
 				OutFile.write('R')
+				TEST.write('R')
 				continue
 			OutFile.write(',%s' % r)
+			TEST.write(',%s' % r)
 		OutFile.write('}\n')
+		TEST.write('}\n')
 
 	OutFile.write('@attribute toxicity {antitoxic, neutral, toxic}\n')
+	TEST.write('@attribute toxicity {antitoxic, neutral, toxic}\n')
 	OutFile.write('@data\n')
-
+	TEST.write('@data\n')
+	
 
 	for tox_pep in toxic:
 		for i in range(8):
@@ -84,6 +92,23 @@ def main():
 		OutFile.write('antitoxic\n')
 	OutFile.close()
 
-	
+	#Now create TEST file with one match for each of the motifs
+	for i,motif in enumerate(motifs):
+		if i < 100:
+			for pep in getPepsMatchingMotif(2, motif, residues):
+				for r in range(8):
+					TEST.write('%s,' % pep[r])
+				TEST.write('toxic\n')
+		elif i < 200:
+			for pep in getPepsMatchingMotif(2, motif, residues):
+				for r in range(8):
+					TEST.write('%s,' % pep[r])
+				TEST.write('neutral\n')
+		else:
+			for pep in getPepsMatchingMotif(2, motif, residues):
+				for r in range(8):
+					TEST.write('%s,' % pep[r])
+				TEST.write('antitoxic\n')
+				
 if __name__ == '__main__':
 	main()
