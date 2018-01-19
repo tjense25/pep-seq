@@ -6,3 +6,6 @@ Research to-do list:
 4. Write algorithm to calculate peptide overlap percentage between toxicity groups in simulated data
 5. Run MLP and SMO on No neutral data.
 6. Find Machine learning based clustering software for proteins & run on our dataset
+7. Make simulated data 7: have no neutral motifs, but instead just random
+   just have random proteins (introduce more noise) & run on models to find
+   if machines can still classify. 

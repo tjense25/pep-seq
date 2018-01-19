@@ -1,0 +1,734 @@
+
+Options: -H 17 
+
+=== Classifier model (full training set) ===
+
+Sigmoid Node 0
+    Inputs    Weights
+    Threshold    -1.4987919862511045
+    Node 3    -0.7087738530936203
+    Node 4    -6.031167731995328
+    Node 5    -1.1805156398513494
+    Node 6    -2.6016223406843624
+    Node 7    1.1853828349719024
+    Node 8    -0.8030702495038781
+    Node 9    -0.007420396172317246
+    Node 10    -1.7424266039856846
+    Node 11    -1.3978470282947846
+    Node 12    -0.8412340720182726
+    Node 13    -0.6222600489780932
+    Node 14    1.507272285373666
+    Node 15    -1.4782127080425114
+    Node 16    -2.7782716163977237
+    Node 17    -0.9999913630962641
+    Node 18    -1.246646146822019
+    Node 19    0.13391346962871867
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    0.7116243199997921
+    Node 3    -2.13410610105585
+    Node 4    -2.3949289466440056
+    Node 5    -2.277440813281995
+    Node 6    3.4981552077950915
+    Node 7    -0.6724805093827431
+    Node 8    -2.3449781029637458
+    Node 9    3.022281595430267
+    Node 10    -1.6946826664788177
+    Node 11    1.2154869752128865
+    Node 12    -1.2517856625910992
+    Node 13    2.1069590403439937
+    Node 14    -1.2039931274592677
+    Node 15    -1.9782779755200262
+    Node 16    -2.2833403610624767
+    Node 17    0.7961880983704358
+    Node 18    -2.26798097002574
+    Node 19    -1.6505107151168954
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    -1.5399451382967337
+    Node 3    2.648427248390454
+    Node 4    3.321205913487955
+    Node 5    2.8811603362371585
+    Node 6    -4.429157072821423
+    Node 7    -1.6115921640209012
+    Node 8    3.063087298731487
+    Node 9    -4.1694426012646675
+    Node 10    2.3520231206790694
+    Node 11    -0.7707586529517231
+    Node 12    1.9937039395918872
+    Node 13    -2.5050101729105925
+    Node 14    -0.554334710375783
+    Node 15    2.6178962299637583
+    Node 16    3.3519053651418065
+    Node 17    -0.7861234238484037
+    Node 18    3.0492367564177463
+    Node 19    1.8807300327180296
+Sigmoid Node 3
+    Inputs    Weights
+    Threshold    -30.855190360071035
+    Attrib pos1polarity    -0.1771382350842841
+    Attrib pos1charge    3.251935866103457
+    Attrib pos1hydrpthy    -6.009557026186253
+    Attrib pos1MW    -1.6700993264877222
+    Attrib pos2polarity    0.24835395759035686
+    Attrib pos2charge    2.5186444718049383
+    Attrib pos2hydrpthy    -2.88771966631871
+    Attrib pos2MW    -4.296991542610526
+    Attrib pos3polarity    2.8462802891298504
+    Attrib pos3charge    -6.359780078215469
+    Attrib pos3hydrpthy    -1.9508231288308577
+    Attrib pos3MW    -3.453033538448978
+    Attrib pos4polarity    -0.598339724454546
+    Attrib pos4charge    -0.30369501769056306
+    Attrib pos4hydrpthy    -12.773229101158938
+    Attrib pos4MW    -2.895805969101222
+    Attrib pos5polarity    -11.96779747291407
+    Attrib pos5charge    -5.151600540419229
+    Attrib pos5hydrpthy    11.74662118050571
+    Attrib pos5MW    -4.935738807341429
+    Attrib pos6polarity    3.257167011277203
+    Attrib pos6charge    -3.8056694367008426
+    Attrib pos6hydrpthy    2.182486591946837
+    Attrib pos6MW    -0.2553592160016254
+    Attrib pos7polarity    -16.197100327716296
+    Attrib pos7charge    8.073033510670749
+    Attrib pos7hydrpthy    15.136466340918073
+    Attrib pos7MW    -11.942823856910527
+    Attrib pos8polarity    -2.0632591918604124
+    Attrib pos8charge    5.574379421663368
+    Attrib pos8hydrpthy    0.22517324492173366
+    Attrib pos8MW    -1.3518262559719245
+Sigmoid Node 4
+    Inputs    Weights
+    Threshold    -23.71423771202692
+    Attrib pos1polarity    1.4388676006541483
+    Attrib pos1charge    6.979227166551418
+    Attrib pos1hydrpthy    -8.699059000219194
+    Attrib pos1MW    -5.272329625789758
+    Attrib pos2polarity    -0.2036202397148184
+    Attrib pos2charge    7.469363236212832
+    Attrib pos2hydrpthy    -5.691532846367986
+    Attrib pos2MW    -8.397832734672503
+    Attrib pos3polarity    4.079174574662246
+    Attrib pos3charge    1.7106638116886683
+    Attrib pos3hydrpthy    -2.9056512154821608
+    Attrib pos3MW    -5.262972220487504
+    Attrib pos4polarity    -0.4852056555002873
+    Attrib pos4charge    9.213195428975023
+    Attrib pos4hydrpthy    -4.899728446119766
+    Attrib pos4MW    -3.884928127361993
+    Attrib pos5polarity    6.015839912580905
+    Attrib pos5charge    6.216421606985243
+    Attrib pos5hydrpthy    -5.453309612686609
+    Attrib pos5MW    -1.062588595980946
+    Attrib pos6polarity    -3.9946933042484893
+    Attrib pos6charge    18.78548961030938
+    Attrib pos6hydrpthy    -2.693532014227012
+    Attrib pos6MW    -5.881257919523541
+    Attrib pos7polarity    1.0439378340473149
+    Attrib pos7charge    10.568022274281955
+    Attrib pos7hydrpthy    -0.880222609519471
+    Attrib pos7MW    -5.049186443588404
+    Attrib pos8polarity    22.43219312498395
+    Attrib pos8charge    4.062657567864426
+    Attrib pos8hydrpthy    16.27862073881338
+    Attrib pos8MW    -6.30805858372649
+Sigmoid Node 5
+    Inputs    Weights
+    Threshold    -26.78099092126745
+    Attrib pos1polarity    -8.978476438203707
+    Attrib pos1charge    -7.510325669771996
+    Attrib pos1hydrpthy    2.8370300723940804
+    Attrib pos1MW    -11.91629258718317
+    Attrib pos2polarity    1.6964594462288942
+    Attrib pos2charge    0.7247577570948948
+    Attrib pos2hydrpthy    -12.557349434223203
+    Attrib pos2MW    -2.7945264218115637
+    Attrib pos3polarity    1.9597187318528588
+    Attrib pos3charge    1.3148099487549567
+    Attrib pos3hydrpthy    -3.7804216584775583
+    Attrib pos3MW    -6.092932699940355
+    Attrib pos4polarity    4.248441482486984
+    Attrib pos4charge    -0.7655090688240237
+    Attrib pos4hydrpthy    -16.06176431187362
+    Attrib pos4MW    -2.427938254893139
+    Attrib pos5polarity    -0.05848012552378883
+    Attrib pos5charge    9.133805735440104
+    Attrib pos5hydrpthy    -0.3923299516268694
+    Attrib pos5MW    -12.46877245784785
+    Attrib pos6polarity    2.996173696790333
+    Attrib pos6charge    -3.6004871241201006
+    Attrib pos6hydrpthy    -12.155031167871854
+    Attrib pos6MW    -2.299630071577316
+    Attrib pos7polarity    7.531314627675677
+    Attrib pos7charge    -1.8339733147531905
+    Attrib pos7hydrpthy    -8.367313837618404
+    Attrib pos7MW    -4.9554814552862645
+    Attrib pos8polarity    3.892070133403193
+    Attrib pos8charge    0.8107165809904081
+    Attrib pos8hydrpthy    -2.1870196240531876
+    Attrib pos8MW    1.3207140019721653
+Sigmoid Node 6
+    Inputs    Weights
+    Threshold    -33.214953017142356
+    Attrib pos1polarity    -3.3242838156480796
+    Attrib pos1charge    3.840433153852286
+    Attrib pos1hydrpthy    1.2234273037766283
+    Attrib pos1MW    7.476988254588285
+    Attrib pos2polarity    3.639892079167916
+    Attrib pos2charge    -4.431624830215472
+    Attrib pos2hydrpthy    -1.016360118139139
+    Attrib pos2MW    -1.7223648873315671
+    Attrib pos3polarity    4.854340884166864
+    Attrib pos3charge    -1.1132380469238181
+    Attrib pos3hydrpthy    -4.1672845958568185
+    Attrib pos3MW    -9.859093154563812
+    Attrib pos4polarity    4.674536338870001
+    Attrib pos4charge    -7.121277001102006
+    Attrib pos4hydrpthy    -2.9946460521048452
+    Attrib pos4MW    -4.343603538684379
+    Attrib pos5polarity    0.8237139073322299
+    Attrib pos5charge    2.8500988911238143
+    Attrib pos5hydrpthy    -4.016647970343877
+    Attrib pos5MW    -0.08229888963064139
+    Attrib pos6polarity    0.5340430151474415
+    Attrib pos6charge    3.117217672336724
+    Attrib pos6hydrpthy    -9.229636297517326
+    Attrib pos6MW    -12.489821739879455
+    Attrib pos7polarity    -4.720464419354008
+    Attrib pos7charge    0.11941071939901998
+    Attrib pos7hydrpthy    10.38490960246395
+    Attrib pos7MW    19.46335861337657
+    Attrib pos8polarity    10.960984508198914
+    Attrib pos8charge    8.780611564335006
+    Attrib pos8hydrpthy    0.7810558129355462
+    Attrib pos8MW    -11.635264477091802
+Sigmoid Node 7
+    Inputs    Weights
+    Threshold    -36.467339968587765
+    Attrib pos1polarity    -0.9753913159241384
+    Attrib pos1charge    3.0076363785546287
+    Attrib pos1hydrpthy    7.142369300017659
+    Attrib pos1MW    7.305555706092782
+    Attrib pos2polarity    -3.1238727171304905
+    Attrib pos2charge    7.9952479675282415
+    Attrib pos2hydrpthy    6.520811678151191
+    Attrib pos2MW    6.295118318875043
+    Attrib pos3polarity    -1.0570006208501834
+    Attrib pos3charge    9.806596805408873
+    Attrib pos3hydrpthy    11.480741343244432
+    Attrib pos3MW    5.115619942735492
+    Attrib pos4polarity    0.05845827245136525
+    Attrib pos4charge    1.014744429256297
+    Attrib pos4hydrpthy    9.737111009329022
+    Attrib pos4MW    8.931090002225844
+    Attrib pos5polarity    0.10603064296527492
+    Attrib pos5charge    6.419042809562424
+    Attrib pos5hydrpthy    13.064934827128452
+    Attrib pos5MW    5.895458774704354
+    Attrib pos6polarity    -4.070676457972292
+    Attrib pos6charge    7.124678081657447
+    Attrib pos6hydrpthy    8.971519213239782
+    Attrib pos6MW    8.810623151699867
+    Attrib pos7polarity    -1.323323252049692
+    Attrib pos7charge    4.763764371930468
+    Attrib pos7hydrpthy    6.549442465206684
+    Attrib pos7MW    6.736631120403532
+    Attrib pos8polarity    -0.06942143210883142
+    Attrib pos8charge    2.8252174239750496
+    Attrib pos8hydrpthy    4.821624921213708
+    Attrib pos8MW    3.2405923146062343
+Sigmoid Node 8
+    Inputs    Weights
+    Threshold    -25.08367788453195
+    Attrib pos1polarity    2.0799127711801892
+    Attrib pos1charge    -3.8210184127913926
+    Attrib pos1hydrpthy    -6.295167665600016
+    Attrib pos1MW    -5.3643490329881685
+    Attrib pos2polarity    2.2521355008983424
+    Attrib pos2charge    -6.022593521147768
+    Attrib pos2hydrpthy    -5.511209591446312
+    Attrib pos2MW    -5.404347361099829
+    Attrib pos3polarity    -3.632354870982422
+    Attrib pos3charge    6.567029942867206
+    Attrib pos3hydrpthy    -10.19520283255175
+    Attrib pos3MW    -4.197388573437068
+    Attrib pos4polarity    -12.32367371127645
+    Attrib pos4charge    -5.283626893875349
+    Attrib pos4hydrpthy    2.8693721454507224
+    Attrib pos4MW    -9.184399043946184
+    Attrib pos5polarity    0.18257261931525323
+    Attrib pos5charge    12.697194064459216
+    Attrib pos5hydrpthy    -4.382311430934854
+    Attrib pos5MW    3.760870544995386
+    Attrib pos6polarity    6.458166615767326
+    Attrib pos6charge    -10.729539528312776
+    Attrib pos6hydrpthy    -4.898447504295754
+    Attrib pos6MW    -4.216940661919058
+    Attrib pos7polarity    -2.5825603981504934
+    Attrib pos7charge    -8.539354488156068
+    Attrib pos7hydrpthy    -3.864761454350086
+    Attrib pos7MW    -7.255593195944863
+    Attrib pos8polarity    7.689734415973646
+    Attrib pos8charge    -1.8154639369605141
+    Attrib pos8hydrpthy    -6.335259627927204
+    Attrib pos8MW    3.973216609871068
+Sigmoid Node 9
+    Inputs    Weights
+    Threshold    -26.99254836542925
+    Attrib pos1polarity    2.3615932718144292
+    Attrib pos1charge    3.32100422707959
+    Attrib pos1hydrpthy    -3.3512889276898825
+    Attrib pos1MW    -4.647890783446091
+    Attrib pos2polarity    -3.3031137576696894
+    Attrib pos2charge    -0.497531231365028
+    Attrib pos2hydrpthy    -3.7779109990852167
+    Attrib pos2MW    -2.324583408707195
+    Attrib pos3polarity    -1.4637607572128541
+    Attrib pos3charge    3.3055582093665814
+    Attrib pos3hydrpthy    -3.249375448651756
+    Attrib pos3MW    -5.112186451708336
+    Attrib pos4polarity    -2.6816764955610672
+    Attrib pos4charge    3.7205743822804065
+    Attrib pos4hydrpthy    -2.8568034093638794
+    Attrib pos4MW    -3.1438194831729604
+    Attrib pos5polarity    0.3329529441327886
+    Attrib pos5charge    3.188715894460569
+    Attrib pos5hydrpthy    -7.061716468742219
+    Attrib pos5MW    -4.2433859263497435
+    Attrib pos6polarity    2.9012391633096306
+    Attrib pos6charge    -1.2805126765397512
+    Attrib pos6hydrpthy    -5.484634048317612
+    Attrib pos6MW    -2.6574901614926483
+    Attrib pos7polarity    -0.4047347612581549
+    Attrib pos7charge    3.283178754673787
+    Attrib pos7hydrpthy    -5.000087508064873
+    Attrib pos7MW    -5.781284580294082
+    Attrib pos8polarity    0.26927176489664706
+    Attrib pos8charge    -11.913055464203573
+    Attrib pos8hydrpthy    8.365258882508641
+    Attrib pos8MW    29.306709135802112
+Sigmoid Node 10
+    Inputs    Weights
+    Threshold    -20.911190891314874
+    Attrib pos1polarity    -13.601523316087793
+    Attrib pos1charge    -9.383370356823884
+    Attrib pos1hydrpthy    6.019011205189976
+    Attrib pos1MW    -15.762523366985427
+    Attrib pos2polarity    1.4228701333421092
+    Attrib pos2charge    -0.975908338078362
+    Attrib pos2hydrpthy    -4.499521257446445
+    Attrib pos2MW    -8.610693104030435
+    Attrib pos3polarity    2.990534433700032
+    Attrib pos3charge    -1.3421677276302233
+    Attrib pos3hydrpthy    -7.175097410828568
+    Attrib pos3MW    -7.342872795246316
+    Attrib pos4polarity    5.190605995704661
+    Attrib pos4charge    4.9226443585421595
+    Attrib pos4hydrpthy    -5.632634701560011
+    Attrib pos4MW    -8.292756535703337
+    Attrib pos5polarity    0.3836150380524122
+    Attrib pos5charge    5.834985614491038
+    Attrib pos5hydrpthy    -7.190448881109046
+    Attrib pos5MW    -6.154255435556539
+    Attrib pos6polarity    -15.915534291673435
+    Attrib pos6charge    -11.316018710043057
+    Attrib pos6hydrpthy    13.97005705414828
+    Attrib pos6MW    -16.069038714915763
+    Attrib pos7polarity    2.502786778237851
+    Attrib pos7charge    5.05491693104426
+    Attrib pos7hydrpthy    -3.9032263129904194
+    Attrib pos7MW    -10.491330341157726
+    Attrib pos8polarity    1.7193742974364923
+    Attrib pos8charge    1.8908385368018252
+    Attrib pos8hydrpthy    -4.16325785850817
+    Attrib pos8MW    -10.052695649006884
+Sigmoid Node 11
+    Inputs    Weights
+    Threshold    -25.907861283928497
+    Attrib pos1polarity    -6.739356446229188
+    Attrib pos1charge    -8.149143059528537
+    Attrib pos1hydrpthy    -6.769762343233085
+    Attrib pos1MW    3.9054843777811303
+    Attrib pos2polarity    0.6195904754338785
+    Attrib pos2charge    -5.751892621100899
+    Attrib pos2hydrpthy    -4.500681265656217
+    Attrib pos2MW    -6.026616830333171
+    Attrib pos3polarity    6.131283777571802
+    Attrib pos3charge    2.895840461598008
+    Attrib pos3hydrpthy    4.252000745706143
+    Attrib pos3MW    14.665025398543136
+    Attrib pos4polarity    2.684503115787936
+    Attrib pos4charge    -11.673874326218993
+    Attrib pos4hydrpthy    3.040409175504439
+    Attrib pos4MW    13.709810655124762
+    Attrib pos5polarity    5.219860830246794
+    Attrib pos5charge    -0.3139886251722877
+    Attrib pos5hydrpthy    -0.17189857760594776
+    Attrib pos5MW    8.92349150784189
+    Attrib pos6polarity    2.625517251436484
+    Attrib pos6charge    1.1190934271690305
+    Attrib pos6hydrpthy    -0.6830766608492349
+    Attrib pos6MW    -0.5671712165152316
+    Attrib pos7polarity    0.3600253962986032
+    Attrib pos7charge    -9.279898901581703
+    Attrib pos7hydrpthy    -4.064261039503767
+    Attrib pos7MW    10.053191155097435
+    Attrib pos8polarity    8.903837445661056
+    Attrib pos8charge    -5.607581724514235
+    Attrib pos8hydrpthy    -2.311792574492158
+    Attrib pos8MW    10.277704439302017
+Sigmoid Node 12
+    Inputs    Weights
+    Threshold    -17.463183023875136
+    Attrib pos1polarity    5.935959844974407
+    Attrib pos1charge    11.85310775975782
+    Attrib pos1hydrpthy    5.442700212338138
+    Attrib pos1MW    2.296277013854706
+    Attrib pos2polarity    -2.1107882801928333
+    Attrib pos2charge    8.749644760716743
+    Attrib pos2hydrpthy    -9.326965021005925
+    Attrib pos2MW    -6.150855136797146
+    Attrib pos3polarity    2.6238056543631085
+    Attrib pos3charge    21.167676734169312
+    Attrib pos3hydrpthy    -6.0401205524848605
+    Attrib pos3MW    -10.616129450163738
+    Attrib pos4polarity    -2.778751933131798
+    Attrib pos4charge    -1.8285219726376727
+    Attrib pos4hydrpthy    -10.332948676680381
+    Attrib pos4MW    -4.295599754068393
+    Attrib pos5polarity    0.022788302964247335
+    Attrib pos5charge    6.2326235255391484
+    Attrib pos5hydrpthy    -3.0708887178431468
+    Attrib pos5MW    -7.0994877598118284
+    Attrib pos6polarity    8.378053446798276
+    Attrib pos6charge    16.947552026722747
+    Attrib pos6hydrpthy    5.233645575121254
+    Attrib pos6MW    -5.45426919322287
+    Attrib pos7polarity    -3.0257136795610156
+    Attrib pos7charge    6.846532753161382
+    Attrib pos7hydrpthy    -9.907217447569778
+    Attrib pos7MW    -2.5956539784945525
+    Attrib pos8polarity    4.987871029288551
+    Attrib pos8charge    4.361081890462693
+    Attrib pos8hydrpthy    1.0441813672531177
+    Attrib pos8MW    -0.6038378971620841
+Sigmoid Node 13
+    Inputs    Weights
+    Threshold    -23.43208700474756
+    Attrib pos1polarity    4.098682026565585
+    Attrib pos1charge    -5.986089850191569
+    Attrib pos1hydrpthy    -6.49489941856348
+    Attrib pos1MW    -14.028902622026528
+    Attrib pos2polarity    -2.2502145569735896
+    Attrib pos2charge    -5.370099571879277
+    Attrib pos2hydrpthy    -4.926516081523436
+    Attrib pos2MW    -0.007924289452586006
+    Attrib pos3polarity    -4.411818111027343
+    Attrib pos3charge    3.6976172704719117
+    Attrib pos3hydrpthy    -6.925972064292666
+    Attrib pos3MW    1.7696937525092022
+    Attrib pos4polarity    -2.5327121573676554
+    Attrib pos4charge    0.66895656492757
+    Attrib pos4hydrpthy    -8.898080414878969
+    Attrib pos4MW    -6.4750693185193064
+    Attrib pos5polarity    -14.273160646792153
+    Attrib pos5charge    11.878077486783292
+    Attrib pos5hydrpthy    4.913205993512335
+    Attrib pos5MW    9.473702884840458
+    Attrib pos6polarity    -4.71435477273462
+    Attrib pos6charge    4.327235437462799
+    Attrib pos6hydrpthy    -3.1976705480655654
+    Attrib pos6MW    -6.400165125937259
+    Attrib pos7polarity    3.7898064181540065
+    Attrib pos7charge    -8.466291625685997
+    Attrib pos7hydrpthy    -2.6975399568491665
+    Attrib pos7MW    -16.53424636844953
+    Attrib pos8polarity    3.0772489289020934
+    Attrib pos8charge    5.19487031055823
+    Attrib pos8hydrpthy    -3.111840205646927
+    Attrib pos8MW    -10.999720790888725
+Sigmoid Node 14
+    Inputs    Weights
+    Threshold    -33.54983969608815
+    Attrib pos1polarity    -1.1159633312522215
+    Attrib pos1charge    6.9809862762180215
+    Attrib pos1hydrpthy    5.036075398896442
+    Attrib pos1MW    2.9664574625560247
+    Attrib pos2polarity    -0.1386401813192744
+    Attrib pos2charge    5.30546237737935
+    Attrib pos2hydrpthy    9.13994045299403
+    Attrib pos2MW    3.6802250944715555
+    Attrib pos3polarity    -2.0751047070833253
+    Attrib pos3charge    4.101140072204872
+    Attrib pos3hydrpthy    9.041652239284618
+    Attrib pos3MW    6.012117437870134
+    Attrib pos4polarity    -4.096642642015617
+    Attrib pos4charge    8.566551090058013
+    Attrib pos4hydrpthy    12.937370732999774
+    Attrib pos4MW    8.797523746351725
+    Attrib pos5polarity    -3.649257527915056
+    Attrib pos5charge    11.71472890743508
+    Attrib pos5hydrpthy    10.084089401560135
+    Attrib pos5MW    10.448975155788624
+    Attrib pos6polarity    5.025354389195043
+    Attrib pos6charge    2.0370424495174535
+    Attrib pos6hydrpthy    9.363363599139351
+    Attrib pos6MW    7.034262108323499
+    Attrib pos7polarity    -1.4926848383751876
+    Attrib pos7charge    2.9824934619281684
+    Attrib pos7hydrpthy    9.5547523534748
+    Attrib pos7MW    6.310568673199018
+    Attrib pos8polarity    -3.480552528573252
+    Attrib pos8charge    4.799634755989082
+    Attrib pos8hydrpthy    6.854833231727855
+    Attrib pos8MW    10.40974558850649
+Sigmoid Node 15
+    Inputs    Weights
+    Threshold    -23.83123381180413
+    Attrib pos1polarity    4.069716032995933
+    Attrib pos1charge    1.263774472273299
+    Attrib pos1hydrpthy    -12.061812022019845
+    Attrib pos1MW    -4.330784539238118
+    Attrib pos2polarity    9.454179005085178
+    Attrib pos2charge    -20.393904230409046
+    Attrib pos2hydrpthy    1.4801112256050153
+    Attrib pos2MW    -3.74769854121074
+    Attrib pos3polarity    2.1979896555609924
+    Attrib pos3charge    8.160507028756752
+    Attrib pos3hydrpthy    -7.966276584621662
+    Attrib pos3MW    -3.4561173208363876
+    Attrib pos4polarity    3.5880418500535725
+    Attrib pos4charge    -3.169166508812444
+    Attrib pos4hydrpthy    2.928600167036493
+    Attrib pos4MW    -8.44058612186105
+    Attrib pos5polarity    -13.162465918651552
+    Attrib pos5charge    -13.458013465485244
+    Attrib pos5hydrpthy    8.013776123523378
+    Attrib pos5MW    -15.344922039387782
+    Attrib pos6polarity    6.346982166413745
+    Attrib pos6charge    -1.1635625171270512
+    Attrib pos6hydrpthy    -7.843742102697122
+    Attrib pos6MW    -2.943730860351861
+    Attrib pos7polarity    5.346244981014362
+    Attrib pos7charge    -2.5318341306109255
+    Attrib pos7hydrpthy    -6.423817714116398
+    Attrib pos7MW    -6.147802073548036
+    Attrib pos8polarity    -1.8725664570064806
+    Attrib pos8charge    3.4825101570059767
+    Attrib pos8hydrpthy    -4.991694297517847
+    Attrib pos8MW    -7.593101837269826
+Sigmoid Node 16
+    Inputs    Weights
+    Threshold    -28.346304535511862
+    Attrib pos1polarity    3.5508579866190337
+    Attrib pos1charge    -1.5165783451898514
+    Attrib pos1hydrpthy    -1.5687557593291368
+    Attrib pos1MW    -1.3640467298686767
+    Attrib pos2polarity    1.2867619606257121
+    Attrib pos2charge    5.333819331908632
+    Attrib pos2hydrpthy    -7.39735911297769
+    Attrib pos2MW    -6.651560018625186
+    Attrib pos3polarity    0.009800756971184805
+    Attrib pos3charge    0.5204672233493984
+    Attrib pos3hydrpthy    -2.7097591547885727
+    Attrib pos3MW    -8.420086005413419
+    Attrib pos4polarity    0.22653913667573491
+    Attrib pos4charge    -0.8303512471282545
+    Attrib pos4hydrpthy    -2.073754383570076
+    Attrib pos4MW    -6.284692681935477
+    Attrib pos5polarity    3.964037520559607
+    Attrib pos5charge    4.273146408073832
+    Attrib pos5hydrpthy    -4.245780351861402
+    Attrib pos5MW    -2.091226340166884
+    Attrib pos6polarity    4.331078505411181
+    Attrib pos6charge    -0.4010479432816156
+    Attrib pos6hydrpthy    -3.823722462846227
+    Attrib pos6MW    -0.7985814874786157
+    Attrib pos7polarity    6.924088247225351
+    Attrib pos7charge    15.192444156183644
+    Attrib pos7hydrpthy    6.0457661666571
+    Attrib pos7MW    -6.343636652168993
+    Attrib pos8polarity    -22.26514267721668
+    Attrib pos8charge    -5.084711349739501
+    Attrib pos8hydrpthy    12.512876286064559
+    Attrib pos8MW    -15.684623013676578
+Sigmoid Node 17
+    Inputs    Weights
+    Threshold    -23.39763692148502
+    Attrib pos1polarity    5.121304034960623
+    Attrib pos1charge    -2.8866057614654452
+    Attrib pos1hydrpthy    -5.230813268888049
+    Attrib pos1MW    2.4225643803951935
+    Attrib pos2polarity    7.386274802158932
+    Attrib pos2charge    -11.659662250468502
+    Attrib pos2hydrpthy    2.3379084018317373
+    Attrib pos2MW    6.984819536310724
+    Attrib pos3polarity    -4.677342620072645
+    Attrib pos3charge    6.27340338894382
+    Attrib pos3hydrpthy    1.8901797823234563
+    Attrib pos3MW    -7.143192126719553
+    Attrib pos4polarity    -7.020664921712943
+    Attrib pos4charge    -8.625351084029749
+    Attrib pos4hydrpthy    2.294201191217811
+    Attrib pos4MW    8.955871455817249
+    Attrib pos5polarity    -7.578128948196753
+    Attrib pos5charge    -8.64096843983594
+    Attrib pos5hydrpthy    0.632453788492815
+    Attrib pos5MW    -8.174578632424481
+    Attrib pos6polarity    11.68654665396823
+    Attrib pos6charge    -5.99640695149816
+    Attrib pos6hydrpthy    -3.63074762389797
+    Attrib pos6MW    -6.656286432936866
+    Attrib pos7polarity    -1.6340524714988391
+    Attrib pos7charge    -8.613631199872987
+    Attrib pos7hydrpthy    0.09227466863365502
+    Attrib pos7MW    5.762330756262486
+    Attrib pos8polarity    1.4138457726373173
+    Attrib pos8charge    -4.57017081186338
+    Attrib pos8hydrpthy    -16.13841065018865
+    Attrib pos8MW    -1.6281032120587742
+Sigmoid Node 18
+    Inputs    Weights
+    Threshold    -35.311157708849514
+    Attrib pos1polarity    1.9316904406723143
+    Attrib pos1charge    -3.4945403249354814
+    Attrib pos1hydrpthy    -1.4691213781077388
+    Attrib pos1MW    -7.078904089768556
+    Attrib pos2polarity    1.645258424813736
+    Attrib pos2charge    2.634006189444009
+    Attrib pos2hydrpthy    -2.4479440515716173
+    Attrib pos2MW    -4.5699492960429975
+    Attrib pos3polarity    -9.026768602907834
+    Attrib pos3charge    -5.428181676282398
+    Attrib pos3hydrpthy    4.253821700826206
+    Attrib pos3MW    -11.871752882608066
+    Attrib pos4polarity    -12.090457655867468
+    Attrib pos4charge    -3.4517397085979398
+    Attrib pos4hydrpthy    10.877726296807248
+    Attrib pos4MW    -10.785487574303145
+    Attrib pos5polarity    -11.61795545782779
+    Attrib pos5charge    -10.415094399233105
+    Attrib pos5hydrpthy    9.103844006033897
+    Attrib pos5MW    -8.6230339360725
+    Attrib pos6polarity    -4.459037202061314
+    Attrib pos6charge    12.688475709530918
+    Attrib pos6hydrpthy    -3.364740088653171
+    Attrib pos6MW    -4.720994742001426
+    Attrib pos7polarity    -2.868009638676788
+    Attrib pos7charge    6.123243282061947
+    Attrib pos7hydrpthy    2.4720046506025515
+    Attrib pos7MW    -6.4891960433834734
+    Attrib pos8polarity    9.393141461315267
+    Attrib pos8charge    -9.0949017381972
+    Attrib pos8hydrpthy    1.2255849526214413
+    Attrib pos8MW    1.5743241685066638
+Sigmoid Node 19
+    Inputs    Weights
+    Threshold    -27.129227295209297
+    Attrib pos1polarity    1.6384161227091496
+    Attrib pos1charge    -3.660621253870033
+    Attrib pos1hydrpthy    -6.606597615921907
+    Attrib pos1MW    -1.9437407880737043
+    Attrib pos2polarity    -1.4356111070007729
+    Attrib pos2charge    -18.224657434094038
+    Attrib pos2hydrpthy    3.9435747509352264
+    Attrib pos2MW    -3.816115785893408
+    Attrib pos3polarity    -9.597606493103159
+    Attrib pos3charge    -15.296563252423477
+    Attrib pos3hydrpthy    9.932533263997389
+    Attrib pos3MW    -13.004059338438722
+    Attrib pos4polarity    -3.4435290267890664
+    Attrib pos4charge    1.8115554373944025
+    Attrib pos4hydrpthy    -5.5620828384767735
+    Attrib pos4MW    -2.389545864095996
+    Attrib pos5polarity    -3.306478791698553
+    Attrib pos5charge    -0.9433379233351573
+    Attrib pos5hydrpthy    -7.3525798871252555
+    Attrib pos5MW    -3.5375411027364447
+    Attrib pos6polarity    -0.6917113058107397
+    Attrib pos6charge    0.48309034505633075
+    Attrib pos6hydrpthy    -2.8402102621943572
+    Attrib pos6MW    -9.49714889240222
+    Attrib pos7polarity    -0.36852183056179716
+    Attrib pos7charge    0.7411114717125745
+    Attrib pos7hydrpthy    -14.96769979319618
+    Attrib pos7MW    0.4403723404154221
+    Attrib pos8polarity    -5.635768363383166
+    Attrib pos8charge    3.1819296609330188
+    Attrib pos8hydrpthy    -8.353849163148583
+    Attrib pos8MW    -2.0998812679417207
+Class toxic
+    Input
+    Node 0
+Class neutral
+    Input
+    Node 1
+Class anti-toxic
+    Input
+    Node 2
+
+
+Time taken to build model: 106.92 seconds
+
+Time taken to test model on training data: 0.61 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances       12114               73.9922 %
+Incorrectly Classified Instances      4258               26.0078 %
+Kappa statistic                          0.6099
+Mean absolute error                      0.2505
+Root mean squared error                  0.3552
+Relative absolute error                 56.3575 %
+Root relative squared error             75.3503 %
+Total Number of Instances            16372     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.763    0.123    0.757      0.763    0.760      0.639    0.903     0.775     toxic
+                 0.648    0.183    0.639      0.648    0.643      0.463    0.795     0.660     neutral
+                 0.809    0.084    0.827      0.809    0.818      0.729    0.915     0.857     anti-toxic
+Weighted Avg.    0.740    0.130    0.741      0.740    0.740      0.610    0.871     0.764     
+
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 4164 1184  111 |    a = toxic
+ 1111 3537  810 |    b = neutral
+  227  815 4413 |    c = anti-toxic
+
+Time taken to perform cross-validation: 923.33 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances       11181               68.2934 %
+Incorrectly Classified Instances      5191               31.7066 %
+Kappa statistic                          0.5244
+Mean absolute error                      0.2656
+Root mean squared error                  0.3896
+Relative absolute error                 59.7607 %
+Root relative squared error             82.651  %
+Total Number of Instances            16372     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.797    0.148    0.729      0.797    0.762      0.636    0.890     0.749     toxic
+                 0.530    0.205    0.564      0.530    0.547      0.330    0.717     0.534     neutral
+                 0.721    0.123    0.746      0.721    0.734      0.604    0.879     0.793     anti-toxic
+Weighted Avg.    0.683    0.159    0.680      0.683    0.681      0.523    0.828     0.692     
+
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 4352  970  137 |    a = toxic
+ 1363 2894 1201 |    b = neutral
+  252 1268 3935 |    c = anti-toxic
+
