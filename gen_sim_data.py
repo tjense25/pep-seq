@@ -69,7 +69,7 @@ def main():
 	
 	#output attribute information for the arff file.
 	#for each position in the peptide, print out the residues as their possible nominal values
-	for i in range(8):
+	for i in range(1,9):
 		OutFile.write('@attribute pos%d {' % i)
 		TEST.write('@attribute pos%d {' % i)
 		for r in residues:
@@ -82,8 +82,8 @@ def main():
 		OutFile.write('}\n')
 		TEST.write('}\n')
 
-	OutFile.write('@attribute toxicity {antitoxic, neutral, toxic}\n')
-	TEST.write('@attribute toxicity {antitoxic, neutral, toxic}\n')
+	OutFile.write('@attribute toxicity {anti-toxic, neutral, toxic}\n')
+	TEST.write('@attribute toxicity {anti-toxic, neutral, toxic}\n')
 	OutFile.write('@data\n')
 	TEST.write('@data\n')
 	
@@ -100,7 +100,7 @@ def main():
 	for antitox_pep in  antitoxic:
 		for i in range(8):
 			OutFile.write('%s,' % antitox_pep[i])
-		OutFile.write('antitoxic\n')
+		OutFile.write('anti-toxic\n')
 	OutFile.close()
 
 	#Now create TEST file with one match for each of the motifs
@@ -120,7 +120,7 @@ def main():
 			for pep in getPepsMatchingMotif(2, motif, residues):
 				for r in range(8):
 					TEST.write('%s,' % pep[r])
-				TEST.write('antitoxic\n')
+				TEST.write('anti-toxic\n')
 				
 if __name__ == '__main__':
 	main()
