@@ -1,0 +1,9 @@
+#!/apps/r/3.3.0/bin/Rscript
+
+toxicCounts<-1000
+neutralCounts<-1000
+antitoxicCounts<-1000
+
+motifCounts<-read.table("motifcounts.txt", header=TRUE)
+
+results<-sapply(motifCounts, function(x) {print(x) })
